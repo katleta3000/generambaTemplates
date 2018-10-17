@@ -1,0 +1,2 @@
+# generambaTemplates
+Templates for generamba.
