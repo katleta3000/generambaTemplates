@@ -1,0 +1,47 @@
+//
+//  {{ prefix }}{{ module_info.name }}ModuleProtocols.h
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+@import Foundation;
+
+
+NS_ASSUME_NONNULL_BEGIN
+
+//@class {{ prefix }}{{ module_info.name }}ViewModel;
+
+/**
+ Протокол для взаимодействия View с Interactor (либо из внешнего модуля с Interactor).
+ */
+@protocol {{ prefix }}{{ module_info.name }}BusinessLogic <NSObject>
+
+@end
+
+/**
+ Протокол для взаимодействия Interactor с Presenter.
+ */
+@protocol {{ prefix }}{{ module_info.name }}PresentationLogic <NSObject>
+
+@end
+
+/**
+ Протокол для взаимодействия Presenter с View.
+ */
+@protocol {{ prefix }}{{ module_info.name }}DisplayLogic <NSObject>
+
+//- (void)updateUI;
+//- (void)updateViewModel:({{ prefix }}{{ module_info.name }}ViewModel *)viewModel;
+
+@end
+
+/**
+ Протокол для взаимодействия View с Router.
+ */
+@protocol {{ prefix }}{{ module_info.name }}RoutingLogic <NSObject>
+
+@end
+
+NS_ASSUME_NONNULL_END

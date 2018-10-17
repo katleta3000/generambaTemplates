@@ -1,0 +1,30 @@
+//
+//  {{ prefix }}{{ module_info.name }}ModuleFactory.h
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}. 
+//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+@import Foundation;
+
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ Фабрика, которая создаёт модуль и связывает его компоненты.
+ */
+@class {{ prefix }}{{ module_info.name }}ViewController;
+
+@interface {{ prefix }}{{ module_info.name }}ModuleFactory : NSObject
+
+/**
+ Основной метод фабрики, которая создаёт модуль и связывает его компоненты.
+
+ @return {{ prefix }}{{ module_info.name }}ViewController
+ */
++ ({{ prefix }}{{ module_info.name }}ViewController *)create;
+
+@end
+
+NS_ASSUME_NONNULL_END
