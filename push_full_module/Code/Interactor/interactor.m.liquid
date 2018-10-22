@@ -3,10 +3,11 @@
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
-//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 #import "{{ prefix }}{{ module_info.name }}Interactor.h"
+
 
 @interface {{ prefix }}{{ module_info.name }}Interactor()
 
@@ -16,6 +17,8 @@
 @implementation {{ prefix }}{{ module_info.name }}Interactor
 
 
-#pragma mark - {{ prefix }}{{ module_info.name }}Business
+#pragma mark - {{ prefix }}{{ module_info.name }}BusinessLogic
+
+- (void)fetchData {}
 
 @end

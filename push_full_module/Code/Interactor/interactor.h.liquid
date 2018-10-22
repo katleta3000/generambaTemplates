@@ -2,8 +2,8 @@
 //  {{ prefix }}{{ module_info.name }}Interactor.h
 //  {{ module_info.project_name }}
 //
-//  Created by {{ developer.name }} on {{ date }}. 
-//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 @import Foundation;
@@ -13,11 +13,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
-
+Интерактор модуля {{ module_info.name }}
 */
 @interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}BusinessLogic>
 
-@property (nonatomic, strong) id <{{ prefix }}{{ module_info.name }}PresentationLogic>presenter; /**< Presenter модуля */
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}PresentationLogic> presenter; /**< Presenter модуля */
 
 @end
 

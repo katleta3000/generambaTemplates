@@ -2,8 +2,8 @@
 //  {{ prefix }}{{ module_info.name }}ModuleFactory.h
 //  {{ module_info.project_name }}
 //
-//  Created by {{ developer.name }} on {{ date }}. 
-//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 @import Foundation;
@@ -11,8 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 /**
- Фабрика, которая создаёт модуль и связывает его компоненты.
+ Фабрика, которая создаёт модуль {{ prefix }}{{ module_info.name }} и связывает его компоненты.
  */
 @class {{ prefix }}{{ module_info.name }}ViewController;
 
@@ -26,5 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 + ({{ prefix }}{{ module_info.name }}ViewController *)create;
 
 @end
+
 
 NS_ASSUME_NONNULL_END

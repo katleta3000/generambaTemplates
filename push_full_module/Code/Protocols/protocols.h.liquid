@@ -3,7 +3,7 @@
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
-//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 @import Foundation;
@@ -11,37 +11,47 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-//@class {{ prefix }}{{ module_info.name }}ViewModel;
+
+@class {{ prefix }}{{ module_info.name }}ViewModel;
 
 /**
  Протокол для взаимодействия View с Interactor (либо из внешнего модуля с Interactor).
  */
 @protocol {{ prefix }}{{ module_info.name }}BusinessLogic <NSObject>
 
+/**
+ Базовый метод для запроса данных из Interactor.
+*/
+- (void)fetchData;
+
 @end
+
 
 /**
  Протокол для взаимодействия Interactor с Presenter.
  */
 @protocol {{ prefix }}{{ module_info.name }}PresentationLogic <NSObject>
 
+/**
+ Передача данных от Interactor к Presenterю
+ */
+- (void)updateViewState;
+
 @end
+
 
 /**
  Протокол для взаимодействия Presenter с View.
  */
 @protocol {{ prefix }}{{ module_info.name }}DisplayLogic <NSObject>
 
-//- (void)updateUI;
-//- (void)updateViewModel:({{ prefix }}{{ module_info.name }}ViewModel *)viewModel;
-
-@end
-
 /**
- Протокол для взаимодействия View с Router.
+ Обновление вывода с помощью модели подготовленных данных для отображения.
+ @param viewModel {{ prefix }}{{ module_info.name }}ViewModel.
  */
-@protocol {{ prefix }}{{ module_info.name }}RoutingLogic <NSObject>
+- (void)updatePresentationWithViewModel:({{ prefix }}{{ module_info.name }}ViewModel *)viewModel;
 
 @end
+
 
 NS_ASSUME_NONNULL_END

@@ -2,8 +2,8 @@
 //  {{ prefix }}{{ module_info.name }}ViewController.h
 //  {{ module_info.project_name }}
 //
-//  Created by {{ developer.name }} on {{ date }}. 
-//  Copyright {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 @import UIKit;
@@ -12,14 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
 
+/**
+Вьюконтроллер модуля {{ module_info.name }}
 */
 @interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}DisplayLogic>
 
-@property (nonatomic, strong) id <{{ prefix }}{{ module_info.name }}BusinessLogic>interactor; /**< Interactor модуля */
-@property (nonatomic, strong) id <{{ prefix }}{{ module_info.name }}RoutingLogic>router; /**< Router модуля */
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}BusinessLogic> interactor; /**< Interactor модуля */
 
 @end
+
 
 NS_ASSUME_NONNULL_END
